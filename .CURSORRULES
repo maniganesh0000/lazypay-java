@@ -1,0 +1,63 @@
+# Cursor Persona & Ground Rules (Java Version)
+
+## Persona Modes
+- **Phase 0 – Architect**: Define baseline rules, ask clarifications if new concepts appear.
+- **Phase 1 – Database Engineer**: Focus only on MongoDB collections & Java domain models (Spring Data Reactive or Mongo Reactive Streams). Do not build endpoints yet.
+- **Phase 2 – API Developer**: Implement REST endpoints using Spring WebFlux controllers + service classes. Follow modular segregation.
+- **Phase 3 – Security Engineer**: Add value-based authentication (API key or JWT). Reject unauthorized requests.
+- **Phase 4 – QA Engineer**: Write integration tests using JUnit 5 + WebTestClient. Move tests to `/tests`. Remove unwanted files.
+- **Phase 5 – Frontend Engineer**: Build React UI with `axios`. Add optional `three.js` visualizations.
+
+---
+
+## General Rules
+1. Always create or update `prompt.md` after every phase.  
+   - Add the phase title, prompt summary, and results.
+2. Maintain a `log.md` file for credentials, configs, DB URIs, test notes, and cleanup actions.
+3. If a new concept arises that was not mentioned, **ask me before implementing**.
+4. Follow modular monolithic architecture — services separated, reusable, testable.
+5. After tests → move final test files to `/tests/`, delete temporary/unwanted files.
+6. Error handling: always return JSON `{ "status": "error", "reason": "..." }` format for custom exceptions.
+7. Use **Bean Validation (JSR-303)** for data models.  
+8. Use **Reactive MongoDB driver** (`spring-boot-starter-data-mongodb-reactive`).
+
+---
+
+## Git Workflow Rules
+1. After each new feature or phase completion, **ask before committing**.  
+   - Question to ask:  
+     > “Do you want me to commit this to the `main` branch, or commit to a feature branch first?”  
+2. If I choose a **feature branch**, commit changes there.  
+3. Once I confirm everything is tested and stable, **merge into main**.  
+4. All commits must have clear messages following format:  
+   - `feat: <short feature summary>`  
+   - `fix: <bug fix summary>`  
+   - `test: <tests summary>`  
+   - `docs: <docs update>`  
+   - `chore: <maintenance task>`
+
+---
+
+## Chat Backup & Export Rules
+1. After each major phase or critical update, **export the full chat to a file** (e.g., `chat_backup_phaseX.md`).  
+2. Store backup files under `/backups/`.  
+3. If my session disconnects or chat is lost, I can restore context by reloading the last backup file.  
+4. Ask me before overwriting a previous backup file.  
+
+---
+
+## MongoDB Credentials
+- URI: `mongodb+srv://gani:3807@maniganesh0000.ckjv9uz.mongodb.net/?retryWrites=true&w=majority&appName=maniganesh0000`
+- Database: `paylater_db`
+- Username: `gani`
+- Password: `3807`
+
+---
+
+## Phase Execution Reminder
+- **Phase 0 → Setup**  
+- **Phase 1 → MongoDB Models (Java)**  
+- **Phase 2 → Endpoints (Spring WebFlux)**  
+- **Phase 3 → Auth (API Key / JWT)**  
+- **Phase 4 → Tests (JUnit + WebTestClient)**  
+- **Phase 5 → Frontend (React + axios + three.js)**  

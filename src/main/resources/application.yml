@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: pay-later-service
+  
+  data:
+    mongodb:
+      uri: mongodb+srv://gani:3807@maniganesh0000.ckjv9uz.mongodb.net/paylater_db?retryWrites=true&w=majority&appName=maniganesh0000
+      database: paylater_db
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.lazypay: DEBUG
+    org.springframework.data.mongodb: DEBUG
+    org.mongodb: DEBUG

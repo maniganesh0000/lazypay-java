@@ -33,4 +33,7 @@ public class Merchant {
     @DecimalMin(value = "0.0", inclusive = true, message = "Total fee collected cannot be negative")
     @Field("totalFeeCollected")
     private BigDecimal totalFeeCollected;
+    
+    @Field("apiKey")
+    private String apiKey;
 }

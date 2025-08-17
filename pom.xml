@@ -50,16 +50,11 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Spring Boot Starter Test WebFlux -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test-webflux</artifactId>
-            <scope>test</scope>
-        </dependency>
-
         <!-- MongoDB Reactive Streams Driver -->
         <dependency>
-            <groupId>org.mongodb:mongodb-driver-reactivestreams</groupId>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-reactivestreams</artifactId>
+            <version>4.11.1</version>
         </dependency>
 
         <!-- Lombok for reducing boilerplate -->

@@ -17,4 +17,6 @@ public interface MerchantRepository extends ReactiveMongoRepository<Merchant, St
      * Check if merchant exists by name
      */
     Mono<Boolean> existsByName(String name);
+    
+    Mono<Merchant> findByApiKey(String apiKey);
 }

@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://gani:3807@maniganesh0000.ckjv9uz.mongodb.net/paylater_db_test?retryWrites=true&w=majority&appName=maniganesh0000
+      database: paylater_db_test
+
+logging:
+  level:
+    com.lazypay: DEBUG
+    org.springframework.data.mongodb: DEBUG

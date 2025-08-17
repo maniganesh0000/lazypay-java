@@ -37,4 +37,7 @@ public class User {
     @DecimalMin(value = "0.0", inclusive = true, message = "Dues cannot be negative")
     @Field("dues")
     private BigDecimal dues;
+    
+    @Field("apiKey")
+    private String apiKey;
 }

@@ -22,4 +22,6 @@ public interface UserRepository extends ReactiveMongoRepository<User, String> {
      * Check if user exists by email
      */
     Mono<Boolean> existsByEmail(String email);
+    
+    Mono<User> findByApiKey(String apiKey);
 }
